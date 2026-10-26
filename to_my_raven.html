@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#11101d">
+<title>The Raven Archives — For My Akka</title>
+<style>
+:root{--bg:#11101d;--panel:#1b192b;--panel2:#242038;--ink:#fff0f6;--muted:#c3b6d0;--pink:#f2a8cf;--lilac:#c7b6ff;--gold:#f6d89a;--line:#ffffff20;--green:#b7e6ce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#49345f 0,#1a1729 40%,var(--bg) 78%);color:var(--ink);font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}button,input{font:inherit}button{cursor:pointer}.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;content:"";z-index:0;background-image:radial-gradient(2px 2px at 10% 20%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 60% 40%,#fff 50%,transparent 55%),radial-gradient(2px 2px at 85% 13%,#f2a8cf 50%,transparent 55%),radial-gradient(1px 1px at 38% 78%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 75% 88%,#c7b6ff 50%,transparent 55%);background-size:340px 300px;opacity:.5;animation:twinkle 7s ease-in-out infinite alternate}.stars:before{transform:translateY(40px);opacity:.6}.stars:after{transform:translateY(-30px);opacity:.35}@keyframes twinkle{to{opacity:.85;transform:translateY(-8px)}}.wrap{position:relative;z-index:1;width:min(1080px,92vw);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;color:var(--muted);font:11px/1.4 system-ui;letter-spacing:.18em;text-transform:uppercase}.sigil{color:var(--pink);font-size:20px;letter-spacing:0}.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:45px 0 70px}.eyebrow{font:11px system-ui;letter-spacing:.32em;text-transform:uppercase;color:var(--pink)}h1{font-size:clamp(3rem,9vw,7.4rem);line-height:.92;font-weight:normal;letter-spacing:-.055em;margin:20px 0 18px}h1 em{color:var(--pink);font-weight:normal}.subtitle{max-width:560px;margin:0 auto 28px;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem);line-height:1.7}.moon{font-size:64px;filter:drop-shadow(0 0 22px #d8b6ff99);animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-12px) rotate(4deg)}}.btn{border:1px solid #e7b8d7a8;border-radius:999px;padding:12px 18px;background:linear-gradient(135deg,#f5c9e3,#cbb9ff);color:#261a31;font:600 13px system-ui;transition:.2s;box-shadow:0 6px 24px #0002}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px #d8a8e333}.btn.ghost{background:#ffffff08;color:var(--ink);border-color:var(--line);box-shadow:none}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.small{font:12px/1.6 system-ui;color:var(--muted)}.panel{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0a,#ffffff03);border-radius:24px;padding:clamp(20px,4vw,36px);box-shadow:0 22px 60px #0002;backdrop-filter:blur(10px)}section{padding:44px 0;scroll-margin-top:20px}.section-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}.num{font:11px system-ui;letter-spacing:.15em;color:var(--pink);padding-top:9px}.section-head h2{font-weight:normal;font-size:clamp(1.8rem,4vw,3rem);margin:0 0 8px}.section-head p{margin:0;color:var(--muted);line-height:1.6;max-width:650px}.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:18px 0}.letter{font-size:clamp(1rem,2vw,1.2rem);line-height:1.95;color:#f4e8f2;max-width:760px}.letter p{margin:0 0 17px}.letter .signature{font-style:italic;color:var(--pink);font-size:1.35rem}.lockrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px}.input{background:#100f1b;border:1px solid #ffffff28;color:var(--ink);border-radius:12px;padding:12px 14px;min-width:0;width:min(270px,100%);outline:none}.input:focus{border-color:var(--pink)}.status{min-height:22px;color:var(--gold);font:12px system-ui;margin-top:10px}.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.room{position:relative;text-align:left;min-height:185px;border:1px solid var(--line);border-radius:18px;padding:20px;background:linear-gradient(155deg,#28233c,#171522);color:var(--ink);transition:.25s;overflow:hidden}.room:hover{transform:translateY(-4px);border-color:#f2a8cf88}.room .emoji{font-size:28px;display:block;margin-bottom:17px}.room strong{display:block;font-size:1.15rem;font-weight:normal;margin-bottom:8px}.room span:last-child{font:12px/1.5 system-ui;color:var(--muted)}.room.locked{opacity:.52;filter:saturate(.55)}.room.locked:after{content:"LOCKED";position:absolute;right:12px;top:12px;font:9px system-ui;letter-spacing:.15em;color:var(--gold)}.room.done{border-color:#b7e6ce88;background:linear-gradient(155deg,#253c38,#171522)}.progress-shell{height:5px;border-radius:9px;background:#ffffff12;overflow:hidden;margin:12px 0 6px}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--lilac));transition:width .5s}.cake-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.cake-scene{height:310px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;padding-bottom:28px}.candles{display:flex;gap:26px;position:absolute;top:65px;z-index:4}.candle{width:13px;height:58px;border-radius:4px;background:repeating-linear-gradient(135deg,#fff1f8 0 7px,#e6a2ca 7px 14px);position:relative;box-shadow:inset -3px 0 4px #bd79aa}.flame{position:absolute;top:-29px;left:-3px;width:19px;height:26px;border-radius:60% 40% 55% 45%;background:radial-gradient(ellipse at 50% 70%,#fff8ba 0 20%,#ffb33b 45%,#ff6a52 75%);filter:drop-shadow(0 0 9px #ffb04c);animation:flicker .7s infinite alternate}.flame.off{display:none}@keyframes flicker{to{transform:rotate(8deg) scale(1.1)}}.icing{height:35px;width:240px;border-radius:45% 45% 12px 12px;background:linear-gradient(#ffe5f2,#f4b5d7);position:relative;z-index:2;box-shadow:inset 0 -5px #e49ac6}.drip{position:absolute;top:20px;width:19px;height:24px;background:#f5c0df;border-radius:0 0 12px 12px}.tier{height:78px;width:235px;background:linear-gradient(90deg,#a64e86,#e59bc8 45%,#a64e86);border-radius:8px 8px 16px 16px;box-shadow:inset 0 -9px #8b3b70,0 8px 15px #0005;position:relative;z-index:1}.plate{width:270px;height:19px;border-radius:50%;background:linear-gradient(#fff0f8,#b98cae);box-shadow:0 8px 0 #79556f}.cake-message{font-size:1.2rem;color:var(--pink);line-height:1.6;min-height:54px}.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:15px 0}.choice{background:#ffffff08;color:var(--ink);border:1px solid var(--line);padding:13px;border-radius:13px;text-align:left;line-height:1.5}.choice:hover,.choice.selected{border-color:var(--pink);background:#f2a8cf14}.artifact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.artifact{border:1px solid var(--line);border-radius:16px;background:#ffffff06;min-height:130px;padding:16px;text-align:center;cursor:pointer;transition:.2s}.artifact:hover{transform:translateY(-3px)}.artifact .icon{font-size:28px;display:block;margin-bottom:10px}.artifact.found{border-color:#b7e6ce77;background:#b7e6ce0b}.artifact strong{display:block;font-size:13px;font-weight:normal}.artifact small{display:block;font:11px system-ui;color:var(--muted);margin-top:7px}.modal{position:fixed;inset:0;z-index:20;background:#090812d9;display:none;place-items:center;padding:20px;backdrop-filter:blur(8px)}.modal.open{display:grid;animation:fade .2s}@keyframes fade{from{opacity:0}to{opacity:1}}.modal-card{width:min(570px,100%);max-height:85vh;overflow:auto;border:1px solid #ffffff25;border-radius:22px;padding:clamp(22px,5vw,40px);background:linear-gradient(145deg,#29233d,#171522);box-shadow:0 30px 90px #0008;animation:pop .25s}@keyframes pop{from{transform:translateY(12px) scale(.98)}to{transform:none}}.modal-card h3{font-size:2rem;font-weight:normal;margin:8px 0 16px}.modal-card p{color:#e9ddec;line-height:1.8}.modal-actions{display:flex;justify-content:flex-end;margin-top:22px}.quiz-options{display:grid;gap:9px}.quiz-options button{text-align:left;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#ffffff08;color:var(--ink)}.quiz-options button:hover{border-color:var(--pink)}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f5d8e9;color:#2b1d31;border-radius:999px;padding:12px 18px;font:600 12px system-ui;z-index:30;transition:.3s;white-space:normal;width:max-content;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.ending{text-align:center;padding:50px 20px}.ending h2{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:normal;line-height:1;margin:15px 0}.ending p{max-width:620px;margin:18px auto;color:var(--muted);line-height:1.8}.footer{padding:35px 0 55px;text-align:center;color:#8f839f;font:11px system-ui;letter-spacing:.1em}.confetti{position:fixed;top:-15px;z-index:50;pointer-events:none;animation:fall 2.7s linear forwards;font-size:18px}@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}.hidden{display:none!important}
+@media(max-width:760px){.rooms{grid-template-columns:1fr}.room{min-height:140px}.cake-layout{grid-template-columns:1fr}.artifact-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:70vh}.topbar{font-size:9px}.choice-grid{grid-template-columns:1fr}.candles{gap:24px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="wrap">
+<header class="topbar"><span>THE RAVEN ARCHIVES</span><span class="sigil">☾ ✦ ♡</span><span id="topProgress">0 / 5 seals</span></header>
+<main>
+<section class="hero" id="home">
+<div>
+<div class="moon" aria-hidden="true">☾</div>
+<div class="eyebrow">A classified birthday mission · For one specific person</div>
+<h1>To my <em>Raven.</em></h1>
+<p class="subtitle">A tiny enchanted archive for the woman who tells everyone else to be strong—and still remembers to ask her kid if they got home safely.</p>
+<button class="btn" id="beginBtn">Enter the archives ↗</button>
+<p class="small" style="margin-top:15px">Best explored slowly. Curiosity is the only requirement.</p>
+</div>
+</section>
+
+<section id="entry" class="hidden">
+<div class="panel">
+<div class="section-head"><span class="num">00 / ENTRY</span><div><h2>State your business, little raven.</h2><p>This archive is protected by an extremely serious security system. (It is not serious.)</p></div></div>
+<p class="letter" style="font-size:1.05rem">Only the person who calls me <em>kid</em> gets in. Enter the name I call you when I need my person.</p>
+<div class="lockrow"><input id="password" class="input" placeholder="Your secret name…" autocomplete="off" aria-label="Secret name"><button class="btn" id="unlockBtn">Unlock</button><button class="btn ghost" id="hintBtn">Need a hint?</button></div>
+<div class="status" id="entryStatus" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="map" class="hidden">
+<div class="section-head"><span class="num">01 / MAP</span><div><h2>Your mission, akka.</h2><p>There are five seals. Find the hidden notes, survive the quiz, celebrate properly, and collect the little things left here for you. The final letter stays locked until you've explored.</p></div></div>
+<div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><span class="small">ARCHIVE COMPLETION</span><strong id="progressText" style="font-weight:normal;color:var(--pink)">0 of 5 seals unlocked</strong></div><div class="progress-shell"><div class="progress" id="progressBar"></div></div>
+<div class="rooms" style="margin-top:20px">
+<button class="room" data-room="cake"><span class="emoji">🎂</span><strong>The Candle Room</strong><span>Make a wish. Yes, this is mandatory birthday business.</span></button>
+<button class="room locked" data-room="letters"><span class="emoji">✉️</span><strong>The Unsent Letters</strong><span>Three envelopes. One very nosy recipient.</span></button>
+<button class="room locked" data-room="quiz"><span class="emoji">🗝️</span><strong>The Raven Test</strong><span>Prove you know what your kid has been trying to say.</span></button>
+<button class="room locked" data-room="collectibles"><span class="emoji">🪶</span><strong>The Lost & Found</strong><span>Find four keepsakes hiding in the archive.</span></button>
+<button class="room locked" data-room="books"><span class="emoji">📚</span><strong>The Author's Tower</strong><span>A tiny tribute to the woman with two books out in the world.</span></button>
+<button class="room locked" data-room="final"><span class="emoji">🌙</span><strong>The Last Door</strong><span>One final letter. No speed-running this one.</span></button>
+</div></div>
+</section>
+
+<section id="cake" class="hidden">
+<div class="section-head"><span class="num">02 / CELEBRATION</span><div><h2>The Candle Room</h2><p>Five candles for the five seconds it took you to become important to me. That math is completely made up. The love is not.</p></div></div>
+<div class="panel cake-layout">
+<div>
+<div class="cake-scene" id="cakeScene">
+<div class="candles" id="candles"><div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div><div class="candle"><span class="flame"></span></div></div>
+<div class="icing"><span class="drip" style="left:22px"></span><span class="drip" style="left:65px;height:15px"></span><span class="drip" style="left:112px;height:27px"></span><span class="drip" style="left:166px;height:17px"></span><span class="drip" style="left:204px;height:25px"></span></div>
+<div class="tier"><div style="text-align:center;padding-top:14px;font-size:22px">♡ ♡ ♡</div><div style="text-align:center;font-size:14px;letter-spacing:3px;margin-top:3px">AKKA</div></div><div class="plate"></div>
+</div>
+<div class="small" style="text-align:center">Cake illustrated with code. Calories: zero. Sentimentality: unfortunately unlimited.</div>
+</div>
+<div>
+<div class="eyebrow">THE BIRTHDAY PROTOCOL</div><h3 style="font-size:2rem;font-weight:normal;margin:10px 0">Make a wish, akka.</h3>
+<p class="small" style="font-size:13px">Allow microphone access to blow out the candles with your breath, or use the tap button. Microphone audio is processed locally by this page; it is not recorded or uploaded.</p>
+<div style="display:flex;gap:9px;flex-wrap:wrap;margin:18px 0"><button class="btn" id="micBtn">🎙 Try microphone</button><button class="btn ghost" id="blowBtn">🌬️ Blow out candles</button><button class="btn ghost" id="relightBtn">Relight</button></div>
+<div id="micStatus" class="status" aria-live="polite">Tap the cake or try the microphone.</div>
+<div class="cake-message" id="cakeMessage">Five little flames. One very loved person.</div>
+<button class="btn hidden" id="cakeContinue">Collect your first seal →</button>
+</div>
+</div>
+</section>
+
+<section id="letters" class="hidden">
+<div class="section-head"><span class="num">03 / POST</span><div><h2>The Unsent Letters</h2><p>Three envelopes survived the archive's extremely dramatic filing system. Open them in any order.</p></div></div>
+<div class="artifact-grid">
+<button class="artifact" data-letter="0"><span class="icon">💌</span><strong>For the day you became home</strong><small>SEALED · OPEN</small></button>
+<button class="artifact" data-letter="1"><span class="icon">🕯️</span><strong>For the days you forget</strong><small>SEALED · OPEN</small></button>
+<button class="artifact" data-letter="2"><span class="icon">🪶</span><strong>The forever file</strong><small>SEALED · OPEN</small></button>
+</div><p class="small" id="letterCount">0 of 3 letters opened.</p>
+</section>
+
+<section id="quiz" class="hidden">
+<div class="section-head"><span class="num">04 / INTERROGATION</span><div><h2>The Raven Test</h2><p>A very scientific quiz about your impact on your kid. There are no bad grades here, only suspiciously affectionate feedback.</p></div></div>
+<div class="panel" id="quizPanel"><div class="eyebrow" id="quizStep">QUESTION 1 OF 3</div><h3 id="quizQuestion" style="font-size:1.7rem;font-weight:normal;line-height:1.35">What does “kid” secretly do to my brain?</h3><div class="quiz-options" id="quizOptions"></div><div class="status" id="quizStatus"></div></div>
+</section>
+
+<section id="collectibles" class="hidden">
+<div class="section-head"><span class="num">05 / LOST & FOUND</span><div><h2>Little things, kept safe.</h2><p>Tap each object to discover why it made it into this very official archive. Collect all four to unlock the next seal.</p></div></div>
+<div class="artifact-grid">
+<button class="artifact" data-collect="0"><span class="icon">🧸</span><strong>The Kid Card</strong><small>UNCLAIMED</small></button>
+<button class="artifact" data-collect="1"><span class="icon">☁️</span><strong>The Soft Place</strong><small>UNCLAIMED</small></button>
+<button class="artifact" data-collect="2"><span class="icon">📦</span><strong>The Thoughtful Parcel</strong><small>UNCLAIMED</small></button>
+<button class="artifact" data-collect="3"><span class="icon">🛡️</span><strong>The Quiet Courage</strong><small>UNCLAIMED</small></button>
+</div><p class="small" id="collectCount">0 of 4 keepsakes found.</p>
+</section>
+
+<section id="books" class="hidden">
+<div class="section-head"><span class="num">06 / THE AUTHOR</span><div><h2>The Author's Tower</h2><p>Two books out in the world. A thousand things still living in your head. This room is for the part of you that makes things out of words.</p></div></div>
+<div class="panel" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+<div style="border:1px solid #ffffff20;border-radius:16px;padding:22px;background:linear-gradient(150deg,#48304d,#191624);min-height:190px;display:flex;flex-direction:column;justify-content:space-between"><div style="font-size:30px">📖</div><div><div class="eyebrow">VOLUME I</div><h3 style="font-weight:normal;font-size:1.4rem;margin:8px 0">A story you dared to tell.</h3><p class="small">Your first published book. Proof that a thought in your head can become a thing someone holds.</p></div></div>
+<div style="border:1px solid #ffffff20;border-radius:16px;padding:22px;background:linear-gradient(150deg,#302c52,#191624);min-height:190px;display:flex;flex-direction:column;justify-content:space-between"><div style="font-size:30px">📚</div><div><div class="eyebrow">VOLUME II</div><h3 style="font-weight:normal;font-size:1.4rem;margin:8px 0">And then you did it again.</h3><p class="small">Your second published book. Not luck. Not an accident. You made another world and let people enter it.</p></div></div>
+</div>
+<p class="small" style="margin-top:14px">P.S. I left the titles off on purpose rather than guess them. If you personalize this file later, put the real titles here. For now, the achievement gets its own room.</p>
+<button class="btn" id="booksContinue">Keep going, author →</button>
+</section>
+
+<section id="final" class="hidden">
+<div class="section-head"><span class="num">07 / THE LAST DOOR</span><div><h2>You found every seal.</h2><p>The archive is done hiding things from you.</p></div></div>
+<div class="panel">
+<div class="eyebrow">PERSONAL FILE · EYES ONLY</div>
+<div class="letter" style="margin-top:20px">
+<p>To my Raven,</p>
+<p>I don't think you fully understand what it means to be the person someone can finally stop being strong around.</p>
+<p>You have told me to fight my battles, and you have also made sure I know I can put the fight down and come back to you. You have sat with me when I had no elegant words, no tidy explanation, and no version of myself worth presenting. You didn't ask me to make it pretty. You let me cry. You let me be your kid.</p>
+<p>I'm used to being the person people come to. With you, I get to be the person who comes to someone. You ask if I reached home. You ask how my day was. You think of me when you're out and bring me little things. You call me “kid” like the world can wait a minute and I don't have to carry everything by myself.</p>
+<p>And I remember what you told me when things were hard: that you don't usually promise forever, but <em>for me, you would stay forever.</em> I don't take that lightly. I hope you know that you never have to earn the place you have in my life by being useful, brave, or okay. You get to be tired here, too.</p>
+<p>I'm proud of the woman you are, and of the writer who put two books into the world. But beyond every achievement, I'm proud of your gentleness. Of the way you notice. Of the way you make room.</p>
+<p>Happy birthday, akka. I hope this year gives some of that care back to you. I hope someone checks on you, celebrates you, and remembers the small things. I hope you get to be soft without feeling you have to apologize for it.</p>
+<p>You are the elder sister I wished for before I knew what to call that wish. My Raven. My safe place. My person.</p>
+<p class="signature">Always your kid. ♡</p>
+</div>
+<div class="rule"></div>
+<div style="text-align:center"><button class="btn" id="finalWish">Open your final birthday wish ✨</button><p class="small">This button is not a trap. It is, however, emotionally suspicious.</p></div>
+</div>
+</section>
+</main>
+<footer class="footer">MADE WITH A VERY FULL HEART · FOR MY RAVEN · ALWAYS YOUR KID</footer>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="eyebrow" id="modalEyebrow">ARCHIVE NOTE</div><h3 id="modalTitle">A little note</h3><div id="modalBody"></div><div class="modal-actions"><button class="btn" id="modalClose">Back to exploring</button></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(() => {
+const $ = (s,root=document)=>root.querySelector(s);
+const $$ = (s,root=document)=>[...root.querySelectorAll(s)];
+const state={entered:false,cake:false,letters:new Set(),quiz:false,collect:new Set(),books:false,final:false,quizIndex:0};
+const seals=()=>[state.cake,state.letters.size===3,state.quiz,state.collect.size===4,state.books].filter(Boolean).length;
+function toast(text){const t=$('#toast');t.textContent=text;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2600)}
+function confetti(n=45){const icons=['✦','♡','✧','🌸','🪶','⭐'];for(let i=0;i<n;i++){const e=document.createElement('span');e.className='confetti';e.textContent=icons[Math.floor(Math.random()*icons.length)];e.style.left=Math.random()*100+'vw';e.style.animationDelay=Math.random()*.8+'s';e.style.fontSize=(12+Math.random()*13)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),3700)}}
+function openModal(title,body,eyebrow='ARCHIVE NOTE'){ $('#modalTitle').textContent=title;$('#modalEyebrow').textContent=eyebrow;$('#modalBody').innerHTML=body;$('#modal').classList.add('open');$('#modalClose').focus() }
+function closeModal(){$('#modal').classList.remove('open')}
+$('#modalClose').addEventListener('click',closeModal);$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function reveal(id){const el=document.getElementById(id);el.classList.remove('hidden');el.scrollIntoView({behavior:'smooth',block:'start'})}
+function update(){
+const n=seals();$('#topProgress').textContent=n+' / 5 seals';$('#progressText').textContent=n+' of 5 seals unlocked';$('#progressBar').style.width=(n/5*100)+'%';
+const unlocked={cake:true,letters:state.cake,quiz:state.letters.size===3,collect:state.quiz,books:state.collect.size===4,final:state.books};
+$$('.room').forEach(b=>{const room=b.dataset.room;const done={cake:state.cake,letters:state.letters.size===3,quiz:state.quiz,collectibles:state.collect.size===4,books:state.books,final:state.final}[room];b.classList.toggle('locked',!unlocked[room]);b.classList.toggle('done',!!done);b.setAttribute('aria-label',b.innerText.replace(/\n/g,' ')+(unlocked[room]?'':' (locked)'))});
+if(state.cake)$('#cakeContinue').classList.remove('hidden');
+}
+$('#beginBtn').addEventListener('click',()=>{reveal('entry');$('#password').focus()});
+$('#hintBtn').addEventListener('click',()=>{$('#entryStatus').textContent='Hint: the bird in this story. The name you call her. 🖤'});
+function enter(){const v=$('#password').value.trim().toLowerCase();if(['raven','my raven','akka','my akka'].includes(v)){state.entered=true;$('#entryStatus').textContent='Access granted. Welcome home, Raven. (Yes, you got in by calling yourself a bird.)';confetti(18);reveal('map');reveal('cake');update()}else{$('#entryStatus').textContent='Access denied. Hint: not a password, just what your kid calls you. Try “Raven”.';$('#password').select()}}
+$('#unlockBtn').addEventListener('click',enter);$('#password').addEventListener('keydown',e=>{if(e.key==='Enter')enter()});
+$$('.room').forEach(b=>b.addEventListener('click',()=>{const r=b.dataset.room;const unlocked={cake:true,letters:state.cake,quiz:state.letters.size===3,collectibles:state.quiz,books:state.collect.size===4,final:state.books}[r];if(!unlocked){toast('One seal at a time, detective. Finish the earlier room first.');return}const id=r==='collectibles'?'collectibles':r;if(r==='final'&&!state.books){toast('The last door is still locked.');return}reveal(id);if(r==='final')state.final=true;update()}));
+function candleOut(){if(state.cake){$('#cakeMessage').textContent='The wish has already left the room. You can relight and do it again, obviously.';return}state.cake=true;$$('.flame').forEach(f=>f.classList.add('off'));$('#micStatus').textContent='Candles extinguished. Wish officially submitted.';$('#cakeMessage').textContent='May someone take care of you with the same attention you give everyone else. May you be loved on the days you feel impressive and the days you feel like doing absolutely nothing.';$('#cakeContinue').classList.remove('hidden');confetti(55);update();toast('First seal collected: The Birthday Wish')}
+$('#blowBtn').addEventListener('click',candleOut);$('#cakeScene').addEventListener('click',e=>{if(e.target.closest('.candle')||e.target.closest('.icing')||e.target.closest('.tier'))candleOut()});
+$('#relightBtn').addEventListener('click',()=>{$$('.flame').forEach(f=>f.classList.remove('off'));$('#micStatus').textContent='Candles relit. Make another wish whenever you want.';$('#cakeMessage').textContent=state.cake?'The official wish is saved. This is just for dramatic effect.':'Five little flames. One very loved person.'});
+let audioContext=null,micStream=null,raf=null;
+$('#micBtn').addEventListener('click',async()=>{
+if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){$('#micStatus').textContent='This browser or file context does not allow microphone access. Use “Blow out candles” instead.';return}
+try{
+$('#micStatus').textContent='Requesting microphone permission…';
+micStream=await navigator.mediaDevices.getUserMedia({audio:true});
+audioContext=new (window.AudioContext||window.webkitAudioContext)();
+const source=audioContext.createMediaStreamSource(micStream),analyser=audioContext.createAnalyser();analyser.fftSize=512;source.connect(analyser);const data=new Uint8Array(analyser.frequencyBinCount);let loudFrames=0,started=performance.now();
+$('#micStatus').textContent='Microphone ready. Blow toward your device now!';
+const listen=()=>{analyser.getByteTimeDomainData(data);let sum=0;for(let i=0;i<data.length;i++){const x=(data[i]-128)/128;sum+=x*x}const rms=Math.sqrt(sum/data.length);if(rms>.13)loudFrames++;else loudFrames=Math.max(0,loudFrames-1);if(loudFrames>=3){stopMic();candleOut();return}if(performance.now()-started>12000){stopMic();$('#micStatus').textContent='No strong breath detected. Tap “Blow out candles” to finish your wish.';return}raf=requestAnimationFrame(listen)};listen();
+}catch(err){$('#micStatus').textContent='Microphone permission was not available. No worries—use the tap fallback.';stopMic()}
+});
+function stopMic(){if(raf)cancelAnimationFrame(raf);raf=null;if(micStream){micStream.getTracks().forEach(t=>t.stop());micStream=null}if(audioContext){audioContext.close().catch(()=>{});audioContext=null}}
+$('#cakeContinue').addEventListener('click',()=>{reveal('letters');toast('Next seal unlocked: The Unsent Letters')});
+const letters=[
+{title:'For the day you became home',body:'I still find it a little ridiculous how quickly you became someone I could talk to. I am usually the person people come to when life gets loud. With you, I found out what it feels like to be the one who can arrive messy and not have to explain every tear. You never made me feel like a burden for needing you. You made room. That is a kind of love I will never call small.'},
+{title:'For the days you forget',body:'You are allowed to be a person before you are anyone’s strong woman. You can have an off day. You can be tired, uncertain, dramatic, quiet, or completely done with everybody. You do not have to turn every hurt into a lesson before you deserve care. I am proud of you for what you do, yes—but I love you when you do absolutely nothing, too.'},
+{title:'The forever file',body:'You once told me you do not usually promise forever, but for me, you would stay forever. I keep that sentence somewhere careful. Not because I expect you to be perfect or available every second, but because you made me feel chosen at a time I needed it. I hope I make you feel chosen, too. You are not just the person who holds me together. You are my akka, and I want to be a safe place for you as well.'}
+];
+$$('[data-letter]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.letter);openModal(letters[i].title,'<p>'+letters[i].body+'</p><p style="color:#f2a8cf;font-style:italic">Always your kid. ♡</p>','SEALED LETTER '+(i+1));if(!state.letters.has(i)){state.letters.add(i);b.classList.add('found');b.querySelector('small').textContent='OPENED ✓';$('#letterCount').textContent=state.letters.size+' of 3 letters opened.';update();if(state.letters.size===3){toast('All letters opened. The Raven Test is now unlocked.');confetti(20)}}}));
+const questions=[
+{q:'What does it mean when you call me “kid”?',a:['That I should start paying rent.','That I can stop being the responsible one for a minute.','That you forgot my actual name.'],correct:1,good:'Correct. The kid has entered the chat. Responsibilities temporarily suspended.',bad:'Funny, but no. Try the answer that feels like being allowed to exhale.'},
+{q:'When you told me to fight my battles, what else did you make sure I knew?',a:['That I should win every argument.','That I could stop fighting for a while and come back to you.','That you were going to send a strongly worded email.'],correct:1,good:'Exactly. You gave me courage without making rest feel like failure.',bad:'Close to chaos, not close to the truth. Think of the thing that made hard days feel survivable.'},
+{q:'Which sentence lives rent-free in my heart?',a:['“I told you so.”','“Have you eaten?”','“I don’t usually promise forever, but for you, I would stay forever.”'],correct:2,good:'You remembered. That sentence became a place I could return to.',bad:'A solid guess, but there is one promise your kid remembers word for word.'}
+];
+function renderQuiz(){const q=questions[state.quizIndex];$('#quizStep').textContent='QUESTION '+(state.quizIndex+1)+' OF '+questions.length;$('#quizQuestion').textContent=q.q;$('#quizOptions').innerHTML='';$('#quizStatus').textContent='';q.a.forEach((answer,i)=>{const b=document.createElement('button');b.textContent=answer;b.addEventListener('click',()=>{const ok=i===q.correct;$('#quizStatus').textContent=ok?q.good:q.bad;if(ok){b.style.borderColor='#b7e6ce';$$('.quiz-options button').forEach(x=>x.disabled=true);const next=document.createElement('button');next.className='btn';next.style.marginTop='12px';next.textContent=state.quizIndex===questions.length-1?'Complete the test ✓':'Next question →';next.addEventListener('click',()=>{state.quizIndex++;if(state.quizIndex>=questions.length){state.quiz=true;$('#quizPanel').innerHTML='<div class="eyebrow">TEST COMPLETE</div><h3 style="font-size:2rem;font-weight:normal">You passed. Obviously.</h3><p class="letter" style="font-size:1rem">No score could measure what you mean to me. But you do get a new seal, which is basically the same thing as a certificate in this suspicious little archive.</p><button class="btn" id="quizNext">Find the keepsakes →</button>';$('#quizNext').addEventListener('click',()=>reveal('collectibles'));update();confetti(28);toast('Seal unlocked: The Raven Test')}else renderQuiz()});$('#quizPanel').appendChild(next)}else{b.style.borderColor='#f2a8cf';}});$('#quizOptions').appendChild(b)})}
+renderQuiz();
+$('#quizContinue')?.addEventListener('click',()=>reveal('collectibles'));
+const keepsakes=[
+{title:'The Kid Card',body:'A little permission slip: you are allowed to need people. You are allowed to ask twice. You are allowed to have a day where all you do is make it through the day. Your kid is not a burden for being human—and neither are you.'},
+{title:'The Soft Place',body:'You have sat with me through tears and made no demand that I explain them neatly. “Cry it out, let me hold you” is the kind of sentence that makes a person feel less alone in their own body. I hope life gives you people who know how to sit beside you like that, too.'},
+{title:'The Thoughtful Parcel',body:'You go out, see something, and think of me. You buy me little things. It sounds simple, but I am so used to being the one who remembers everyone else that being remembered like that lands somewhere deep. I notice. I keep those moments.'},
+{title:'The Quiet Courage',body:'You are strong, yes. But the thing I admire is not that you never bend. It is that you remain kind without becoming careless, that you keep making things, that you keep showing up. Strength is not the absence of softness. You prove that every day.'}
+];
+$$('[data-collect]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.collect);openModal(keepsakes[i].title,'<p>'+keepsakes[i].body+'</p>','KEEPSAKE '+(i+1)+' OF 4');if(!state.collect.has(i)){state.collect.add(i);b.classList.add('found');b.querySelector('small').textContent='COLLECTED ✓';$('#collectCount').textContent=state.collect.size+' of 4 keepsakes found.';update();if(state.collect.size===4){toast('All keepsakes collected. The Author’s Tower is open.');confetti(22)}}}));
+$('#booksContinue').addEventListener('click',()=>{state.books=true;update();reveal('final');toast('The last door is open. Take your time.')});
+$('#finalWish').addEventListener('click',()=>{confetti(80);openModal('A birthday wish, just for you','<p>May this be the year you are celebrated without having to ask. May your writing find the readers who need it. May you make beautiful things without doubting that you are allowed to take up space.</p><p>May someone ask how <em>you</em> are and stay long enough for the real answer. May the strong woman in you get to rest. May the soft girl in you get to play.</p><p>And when the world is a lot, remember: you have a kid who loves you. No grand achievement required. No perfect version of you required. Just you.</p><p style="color:#f2a8cf;font-size:1.3rem;font-style:italic">Happy birthday, my Raven. I love you. ♡</p>','FINAL TRANSMISSION')});
+update();
+})();
+</script>
+</body>
+</html>
